@@ -1,0 +1,352 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto; /* Enables scrolling */
+    scroll-snap-type: y mandatory; /* Enables smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+/* Wrapper */
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Apply Playfair Display font to all heading tags */
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    color: #193b0a;
+}
+
+/* First Section (Landing Page) */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    scroll-snap-align: start;
+    background-image: url('birds2.0.jpg'); /* Ensure correct file path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    padding: 2rem;
+}
+
+/* Name: Mittal Soni (Top Left) */
+.name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+/* Portfolio (Top Right) */
+.portfolio {
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* DOP / Photographer / Filmmaker (Bottom Left) */
+.title {
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #193b0a;
+}
+
+/* Second Section (Grid Layout) */
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left 1/3 (Image), Right 2/3 (Text) */
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    background-color: #0a1704; /* Dark theme */
+}
+
+/* Left 1/3 (Image) */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+/* Right 2/3 (Text: Bio & My Approach) */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+/* Bio & Approach */
+.bio, .approach {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.bio h2, .approach h2 {
+    color: #e1b62f;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.bio p, .approach p {
+    font-size: 15px;
+    color: beige;
+    max-width: 90%;
+    line-height: 1.6;
+}
+/* Third Page (Body of Work) */
+.bodyofwork-container {
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: #0d1b0f;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.bodyofwork-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.bodyofwork-header::before, .bodyofwork-header::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #d4a017;
+    margin: 0 20px;
+}
+
+/* Work Container */
+.bodyofwork-work-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bodyofwork-work-item {
+    width: 45%;
+    background-color: #1a2c13;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bodyofwork-work-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Titles and Descriptions */
+.bodyofwork-title a {
+    display: block;
+    color: #d4a017;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.bodyofwork-title a:hover {
+    text-decoration: underline;
+}
+
+.bodyofwork-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.bodyofwork-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bodyofwork-work-container {
+        flex-direction: column;
+    }
+    .bodyofwork-work-item {
+        width: 90%;
+    }
+}
+/* Fourth Page (Featured Projects) */
+.featuredprojects-container {
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: #0d1b0f;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+/* Header Styling */
+.featuredprojects-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.featuredprojects-header::before, .featuredprojects-header::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid #d4a017;
+    margin: 0 20px;
+}
+
+.featuredprojects-header h1 {
+    font-size: 50px;
+    color: #d4a017;
+    font-family: "Playfair Display", serif;
+}
+
+/* Projects Container */
+.featuredprojects-work-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Project Box */
+.featuredprojects-work-item {
+    width: 30%;
+    background-color: #1a2c13;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Project Image */
+.featuredprojects-work-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Titles and Descriptions */
+.featuredprojects-title a {
+    display: block;
+    color: #d4a017;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.featuredprojects-title a:hover {
+    text-decoration: underline;
+}
+
+.featuredprojects-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.featuredprojects-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .featuredprojects-work-container {
+        flex-direction: column;
+    }
+    .featuredprojects-work-item {
+        width: 90%;
+    }
+}
+
+
+/* Scrobble Section */
+.scrobble-container {
+    display: flex;
+    height: 100vh;
+    font-family: serif;
+}
+
+.scrobble-left {
+    width: 35%;
+    background-color: #D3A52E;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scrobble-left h1 {
+    font-size: 5rem;
+    color: #1C3D14;
+    line-height: 1.2;
+    margin-bottom: 150px;
+}
+
+.scrobble-left p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #1C3D14;
+}
+
+.scrobble-left a {
+    color: #1C3D14;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.scrobble-right {
+    width: 65%;
+    background: url('last.jpeg') no-repeat center center/cover;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .scrobble-container {
+        flex-direction: column;
+    }
+    .scrobble-left, .scrobble-right {
+        width: 100%;
+    }
+}
+html, body {
+    height: auto;
+    overflow-y: auto;
+}
